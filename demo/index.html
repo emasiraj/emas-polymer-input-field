@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>emas-polymer-input-field demo</title>
+
+  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+  <script type="module">
+    import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+    import '@polymer/iron-demo-helpers/demo-snippet';
+  </script>
+
+  <script type="module" src="../emas-polymer-input-field.js"></script>
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </custom-style>
+</head>
+
+<body>
+  <style>
+    emas-polymer-input-field#inputFieldCustomStyling { 
+      --title-color: white;
+      --title-font-size: 20px;
+
+      --emasPolymerInputField-border-width: 5px;
+      --emasPolymerInputField-border-color:  #f50057;
+      --emasPolymerInputField-background-color: #1E88E5; 
+
+      --inputField-border: 1px solid #f50057;
+      --inputField-border-radius: 1px;
+
+      --submitButton-border: 1px solid #f50057;
+      --submitButton-background-color: #f50057;
+      --submitButton-color: white;
+      --submitButton-font-size: 15px;
+
+      --displayedInputDataField-border-style: dotted hidden dotted hidden;
+      --displayedInputDataField-border-width: 2px;
+      --displayedInputDataField-background-color: rgb(105, 170, 228);
+      --displayedInputDataField-border-color: #f50057;
+
+      --displayedInputData-color: white;
+      --displayedInputData-font-size: 25px;
+
+      --clearButton-border: 1px solid #f50057;
+      --clearButton-background-color: #f50057;
+      --clearButton-color: white;
+      --clearButton-font-size: 18px;
+    }
+  </style>
+  <div class="vertical-section-container centered">
+    <h3>Basic emas-polymer-input-field demo</h3>
+    <demo-snippet>
+      <template>
+        <emas-polymer-input-field id="inputField" field-name="This is an input field"></emas-polymer-input-field>
+      </template>
+    </demo-snippet>
+
+    <demo-snippet>
+      <template>
+        <emas-polymer-input-field id="inputFieldDropdown" field-name="This is an input field with a dropdown"
+          dropdown-values='["IIDX", "Sound Voltex", "DDR", "Cytus", "Deemo"]'></emas-polymer-input-field>
+      </template>
+    </demo-snippet>
+
+    <demo-snippet>
+      <template>
+        <emas-polymer-input-field id="inputFieldDropdownRequired"
+          field-name="This is an input field where a value from the dropdown is required"
+          dropdown-values='["IIDX", "Sound Voltex", "DDR", "Cytus", "Deemo"]' dropdown-value-required>
+        </emas-polymer-input-field>
+      </template>
+    </demo-snippet>
+
+    <demo-snippet>
+      <template>
+        <emas-polymer-input-field id="inputFieldMaxCharacterLimit" field-name="This is an input field with a max character limit of 5"
+          dropdown-values='["IIDX", "Sound Voltex", "DDR", "Cytus", "Deemo"]' max-characters="5">
+        </emas-polymer-input-field>
+      </template>
+    </demo-snippet>
+
+    <demo-snippet>
+      <template>
+        <emas-polymer-input-field id="inputFieldCustomStyling" field-name="This is an input field with custom styling" displayed-input-data="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel urna eu nisi faucibus faucibus. Sed efficitur orci quis lorem posuere, et dictum purus rutrum.">
+        </emas-polymer-input-field>
+      </template>
+    </demo-snippet>
+  </div>
+
+  <script>
+  </script>
+</body>
+
+</html>
