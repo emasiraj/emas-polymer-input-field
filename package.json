@@ -1,5 +1,6 @@
 {
   "name": "emas-polymer-input-field",
+  "version": "0.0.1",
   "description": "An input field made with Polymer 3.0",
   "main": "emas-polymer-input-field.js",
   "dependencies": {
